@@ -1,6 +1,9 @@
 from .. import offline_env
-from gym.envs.mujoco import HalfCheetahEnv, AntEnv, HopperEnv, Walker2dEnv
+from gym.envs.mujoco import AntEnv
 from ..utils.wrappers import NormalizedBoxEnv
+from .walker import Walker2dEnv
+from .hopper import HopperEnv
+from .cheetah import HalfCheetahEnv
 
 class OfflineAntEnv(AntEnv, offline_env.OfflineEnv):
     def __init__(self, **kwargs):
